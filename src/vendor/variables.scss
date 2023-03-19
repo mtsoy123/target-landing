@@ -1,0 +1,23 @@
+$font-family-primary: 'Quicksand', 'Arial', 'Helvetica', sans-serif;
+$font-family-secondary: 'Titillium Web', 'Arial', 'Helvetica', sans-serif;
+
+$color-main: #ffc96a;
+$color-light: #ffffff;
+$color-black: #082357;
+$color-black-opacity-30: rgba(48, 26, 73, 0.3);
+$color-cyan: #ffc96a;
+$color-gradient: linear-gradient(180deg, #0084a7 0%, #00409d 100%);
+$color-transparent: rgba(0, 0, 0, 0);
+
+$screen-desktop: 830px;
+$screen-desktop-large: 1200px;
+$screen-tablet-large: 645px;
+$screen-tablet: 445px;
+
+$transition-hover: 0.3s ease-out;
+
+$filter-light: brightness(0) invert(99%) sepia(2%) saturate(1599%) hue-rotate(180deg) brightness(118%) contrast(100%);
+$filter-cyan: brightness(0) saturate(100%) invert(92%) sepia(48%) saturate(4057%) hue-rotate(309deg) brightness(103%) contrast(101%);
+;
+
+$drop-shadow-cyan: drop-shadow(0px 0px 30px rgba(74, 87, 127, 0.85));

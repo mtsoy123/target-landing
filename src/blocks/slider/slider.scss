@@ -1,0 +1,227 @@
+.slider {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 100px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $screen-desktop-large;
+    box-sizing: border-box;
+  }
+
+  &__header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  &__subheader {
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-light;
+    margin: 0;
+  }
+
+  &__header {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56px;
+    color: $color-light;
+    margin: 0;
+  }
+
+  &__button {
+    transition: background-color $transition-hover;
+    border: 3px solid $color-main;
+    border-radius: 100px;
+    background-color: $color-transparent;
+    display: block;
+    box-sizing: content-box;
+  }
+
+  &__button:hover {
+    transition: background-color $transition-hover;
+    background-color: $color-main;
+  }
+
+  &__button-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__button_type_forward {
+    background-image: url("../images/icon_arrow_forward.svg");
+  }
+
+  &__button_type_backward {
+    background-image: url("../images/icon_arrow_backward.svg");
+  }
+
+  &__button_type_forward:hover {
+    background-image: url("../images/icon_arrow_forward_hover.svg");
+  }
+
+  &__button_type_backward:hover {
+    background-image: url("../images/icon_arrow_backward_hover.svg");
+  }
+
+  &__images {
+    display: flex;
+    padding: 50px 0;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin: 0;
+    scroll-behavior: smooth;
+    cursor: grab;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  &__images::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__images_type_active {
+    cursor: grabbing;
+  }
+
+  &__image-wrapper {
+    list-style-type: none;
+    margin: 0 0 0 30px;
+  }
+
+  &__image {
+    border-radius: 15px;
+    border: 5px solid $color-cyan;
+    filter: $drop-shadow-cyan;
+    width: 350px;
+    object-fit: none;
+    box-sizing: border-box;
+    display: block;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  &__image-wrapper:first-child {
+  }
+
+  &__image-wrapper:last-child {
+    margin-right: 30px;
+  }
+
+  @media only screen and (max-width: $screen-desktop-large) {
+    padding: 100px 0;
+
+    &__container {
+      padding: 0 20px;
+    }
+  }
+
+  @media only screen and (max-width: $screen-desktop) {
+
+    padding: 70px 0;
+
+    &__container {
+      align-items: end;
+    }
+
+    &__header {
+      font-size: 40px;
+      line-height: 46px;
+    }
+
+    &__header-container {
+      padding-left: 0;
+      gap: 16px;
+    }
+
+    &__button-container {
+      padding-right: 0;
+      gap: 20px;
+    }
+
+    &__image {
+      width: 260px;
+      object-fit: contain;
+    }
+
+    &__image-wrapper {
+      margin-left: 30px;
+    }
+
+    &__image-wrapper:first-child {
+      margin-left: 20px;
+    }
+
+    &__image-wrapper:last-child {
+      margin-right: 20px;
+    }
+  }
+
+  @media only screen and (max-width: $screen-tablet) {
+    padding: 40px 0;
+
+    &__header {
+      font-size: 30px;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__subheader {
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    &__header-container {
+      padding: 0 20px 20px 20px;
+      gap: 10px;
+    }
+
+    &__button-container {
+      padding: 0;
+    }
+
+    &__button {
+    }
+
+    &__images {
+      padding: 30px;
+    }
+
+    &__image {
+      width: 130px;
+      object-fit: cover;
+    }
+
+    &__image-wrapper {
+      margin-left: 20px;
+    }
+  }
+}

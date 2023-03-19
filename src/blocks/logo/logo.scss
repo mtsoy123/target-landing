@@ -1,0 +1,27 @@
+.logo {
+
+  &_type_header {
+    width: 200px;
+  }
+
+  &_type_footer {
+    width: 160px;
+    height: 35px;
+    filter: $filter-light;
+  }
+
+  @media only screen and (max-width: $screen-desktop) {
+
+    &_type_footer {
+      width: 140px;
+    }
+  }
+
+  @media only screen and (max-width: $screen-tablet) {
+
+    &_type_header {
+      width: 130px;
+    }
+  }
+}
+

@@ -1,0 +1,157 @@
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+
+  &__subheader {
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $color-light;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+
+  &__header {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56px;
+    text-align: center;
+    color: $color-light;
+    margin: 0;
+    padding-bottom: 30px;
+  }
+
+  &__button {
+    display: block;
+    width: 26px;
+    height: 26px;
+  }
+
+  &__item {
+    width: 100%;
+    max-width: $screen-desktop-large;
+    border-top: 2px $color-main solid;
+  }
+
+  &__item-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__item:last-child {
+    border-bottom: 2px $color-main solid;
+  }
+
+  &__item-header {
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    color: $color-light;
+    margin: 0;
+    padding: 13px 0;
+  }
+
+  &__content-container {
+    padding: 20px;
+    background-color: $color-black;
+    width: 100%;
+    border-top: 2px $color-main solid;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    display: none;
+  }
+
+  &__content-container_type_active {
+    display: flex;
+  }
+
+  &__content {
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 29px;
+    color: $color-light;
+    margin: 0;
+  }
+
+  &__button_type_default {
+    background-image: url("../images/icon_expand.svg");
+  }
+
+  &__button_type_active {
+    background-image: url("../images/icon_fold.svg");
+  }
+
+  @media only screen and (max-width: $screen-desktop-large) {
+    padding: 0 20px;
+
+  }
+
+  @media only screen and (max-width: $screen-desktop) {
+    padding-bottom: 70px;
+
+    &__header {
+      font-size: 40px;
+      line-height: 46px;
+    }
+
+    &__subheader {
+      padding-bottom: 16px;
+    }
+
+    &__item-header {
+      font-size: 20px;
+      line-height: 34px;
+      padding: 10px 0;
+    }
+
+    &__content {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+  }
+
+  @media only screen and (max-width: $screen-tablet) {
+    padding-bottom: 40px;
+    
+    &__header {
+      font-size: 30px;
+      line-height: 32px;
+      padding-bottom: 20px;
+    }
+
+    &__subheader {
+      padding-bottom: 10px;
+    }
+
+    &__item-header {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &__content {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+}

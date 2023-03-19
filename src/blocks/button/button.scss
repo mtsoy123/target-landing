@@ -1,0 +1,115 @@
+.button {
+  border: 0;
+  flex: none;
+  flex-grow: 0;
+  background-color: $color-transparent;
+  line-height: 1;
+  cursor: pointer;
+
+  &__icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: inherit;
+    box-sizing: border-box;
+  }
+
+  &__primary {
+    transition: background-color $transition-hover, color $transition-hover;
+    font-family: $font-family-secondary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    background-color: $color-main;
+    color: $color-black;
+    border-radius: 50px;
+    padding: 12px 20px;
+  }
+
+  &__primary:hover {
+    transition: background-color $transition-hover;
+    background-color: $color-transparent;
+    padding: 10px 18px;
+    border: 2px solid $color-main;
+  }
+
+  &_type_header {
+  }
+
+  &_type_header:hover {
+    transition: color $transition-hover;
+    color: $color-light;
+  }
+
+  &__primary_type_slider:hover {
+    transition: color $transition-hover;
+    color: $color-light;
+  }
+
+  &__secondary {
+
+    color: $color-black;
+    border-radius: 20px;
+    padding: 12px 20px;
+    box-shadow: 0 0 10px r$color-transparent;
+    text-transform: uppercase;
+
+    transition: background $transition-hover;
+    background: $color-cyan;
+  }
+
+  &__secondary:hover {
+    transition: background $transition-hover;
+    background: $color-main;
+  }
+
+  &__icon_type_slider {
+    padding: 25px;
+    width: 35px;
+    height: 35px;
+  }
+
+  @media only screen and (max-width: $screen-desktop) {
+    &__icon_type_header {
+      width: 27px;
+      height: 27px;
+      padding: 20px;
+    }
+
+    &__icon_type_expand-header {
+      width: 16px;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-left: 5px;
+      box-sizing: content-box;
+    }
+
+    &__icon_type_slider {
+      width: 30px;
+      height: 30px;
+      padding: 17px;
+      background-size: 12px;
+    }
+  }
+
+
+  @media only screen and (max-width: $screen-tablet) {
+    &_type_header {
+      padding: 10px 16px;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    &__icon_type_slider {
+      width: 20px;
+      height: 20px;
+      padding: 12px;
+      background-size: 12px;
+    }
+  }
+}
+

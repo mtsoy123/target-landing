@@ -1,0 +1,14 @@
+.divider {
+  width: 100%;
+  height: 1px;
+  background: $color-light;
+  display: none;
+
+  @media only screen and (max-width: $screen-tablet) {
+    &_type_horizontal {
+      display: block;
+      width: calc(100% - 40px);
+      margin: 0 auto;
+    }
+  }
+}
