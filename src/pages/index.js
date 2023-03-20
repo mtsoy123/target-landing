@@ -103,3 +103,12 @@ accordionButtons.forEach((item) => {
 })
 
 
+function getCardCount(n, k, cards) {
+  let total = 0
+  for (let i = 0; i < k; i++) total += cards[i]
+  let best = total
+  for (let i = k - 1, j = cards.length - 1; ~i; i--, j--)
+    total += cards[j] - cards[i]
+  best = Math.max(best, total)
+  return best
+}
